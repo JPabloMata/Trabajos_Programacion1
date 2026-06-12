@@ -1,23 +1,25 @@
-opcion=0
-while opcion!=6:
-    print("CALCULADORA")
+pcion=0
+print("CALCULADORA")
+while opcion!="5":
     print("Escribe el numero para acceder a la opcion")
     print("1: SUMAR")
     print("2: RESTAR")
     print("3: MULTIPLICAR")
     print("4: DIVIDIR")
-    print("5: OPERACION MIXTA")
-    print("6: SALIR")
+    print("5: SALIR")
     opcion=input()
 
     match opcion:
 
         case "1":
             print("HA ELEGIDO SUMAR")
-            resultado=float(input("Escriba el primer numero-- "))
+            num1=(input("Escriba el primer numero-- ")).lower()
+            if num1=="ans":
+                resultado=resultado
+            else:
+                resultado=float(num1)
             respuesta="s"
             while respuesta in ("si", "s"):
-                num1=resultado
                 num2=float(input("Escriba el numero a sumar-- "))
                 resultado=resultado+num2
                 print(f"{num1}+{num2}={resultado}")
@@ -34,11 +36,14 @@ while opcion!=6:
         case "2":
 
             print("HA ELEGIDO RESTAR")
-            resultado=float(input("Escriba el primer numero-- "))
+            num1=(input("Escriba el primer numero-- ")).lower()
+            if num1=="ans":
+                resultado=resultado
+            else:
+                resultado=float(num1)
             respuesta="s"
             while respuesta in ("si", "s"):
-                num1=resultado
-                num2=float(input("Escriba el numero a sumar-- "))
+                num2=float(input("Escriba el numero a restar-- "))
                 resultado=resultado-num2
                 print(f"{num1}-{num2}={resultado}")
                 repetir=True
@@ -53,11 +58,14 @@ while opcion!=6:
         case "3":
 
             print("HA ELEGIDO MULTIPLICAR")
-            resultado=float(input("Escriba el primer numero-- "))
+            num1=(input("Escriba el primer numero-- ")).lower()
+            if num1=="ans":
+                resultado=resultado
+            else:
+                resultado=float(num1)
             respuesta="s"
             while respuesta in ("si", "s"):
-                num1=resultado
-                num2=float(input("Escriba el numero a sumar-- "))
+                num2=float(input("Escriba el numero a multiplicar-- "))
                 resultado=resultado*num2
                 print(f"{num1}x{num2}={resultado}")
                 repetir=True
@@ -72,11 +80,14 @@ while opcion!=6:
         case "4":
 
             print("HA ELEGIDO DIVIDIR")
-            resultado=float(input("Escriba el primer numero-- "))
+            num1=(input("Escriba el primer numero-- ")).lower()
+            if num1=="ans":
+                resultado=resultado
+            else:
+                resultado=float(num1)
             respuesta="s"
             while respuesta in ("si", "s"):
-                num1=resultado
-                num2=float(input("Escriba el numero a sumar-- "))
+                num2=float(input("Escriba el numero a dividir-- "))
                 resultado=resultado/num2
                 print(f"{num1}/{num2}={resultado}")
                 repetir=True
@@ -88,5 +99,3 @@ while opcion!=6:
                         repetir=False
                     else:
                         print("opcion incorrecta. reintentar")
-        case "5":
-            
